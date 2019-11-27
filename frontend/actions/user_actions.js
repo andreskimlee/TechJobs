@@ -33,7 +33,7 @@ export const fetchJob = (jobId) => dispatch => {
     return USERUtil.fetchJob(jobId).then(job => dispatch(fetchSingleJob(job)))
 }
 
-export const searchJobs = ({description, location, fullTime, pages}) => dispatch => {
+export const searchJobs = ({description = "" , location ="", fullTime ="", pages}) => dispatch => {
     debugger 
     return USERUtil.searchJobs(description, location, fullTime, pages).then(jobs => dispatch(fetchJobs(jobs)))
 }

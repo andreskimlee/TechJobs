@@ -1,0 +1,18 @@
+.popular-languages {
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+    color: #3296d4;
+}
+
+.pop-locations {
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+    color: #3296d4;
+}
+
+.pop-1:hover, .pop-2:hover, .pop-3:hover, .pop-4:hover, .pop-5:hover, .pop-6:hover, .pop-7:hover, .pop-8:hover, 
+.pop-9:hover, .pop-10:hover, .pop-11:hover, .pop-12:hover, .pop-13:hover, .pop-14:hover {
+    cursor: pointer;
+} 
