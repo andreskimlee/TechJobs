@@ -146,6 +146,11 @@
 
 }
 
+.feat-job-1:hover {
+    background-color: #fafafa;
+
+}
+
 .title-4-job {
     font-size: 14px;
     font-weight: bold;
@@ -175,7 +180,7 @@
 }
 
 .location {
-    color: #999;
+    color: #999999;
     font-family: sans-serif;
     font-size: 12px;
 

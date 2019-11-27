@@ -22,9 +22,18 @@ export const fetchAllJobs = () => {
     })
 }
 
-export const searchJobs = (description, location, fullTime) => {
+export const fetchJob = (jobId) => {
     return $.ajax({
+        method: "GET", 
+        url: `https://jobs.github.com/positions/${jobId}.json`
+    })
+}
+
+export const searchJobs = (description, location, fullTime, pages) => {
+    debugger 
+    return $.ajax({
+        
         method: "GET",
-        url: `https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}`
+        url: `https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}&page=${pages}`
     })
 }

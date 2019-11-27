@@ -1,9 +1,8 @@
 import React from 'react';
 import searchJobs from '../searchJobs/searchJobs'
-import NavBar from "../NavBar/Nav"
 import { Route, Link } from 'react-router-dom'
 import FeatJobs from '../../components/featured_jobs/featured_jobs'
-
+import ShowJob from '../../components/show_job_page/show_job'
 
 
 class Greeting extends React.Component {
@@ -13,13 +12,33 @@ class Greeting extends React.Component {
       this.state = {
         description: "",
         location: "", 
-        fullTime: false
+        fullTime: false, 
+        moreJobs: "none", 
+        pages: 1
       }
+    }
+
+    moreJobs(e) {
+      this.props.searchJobs({description: this.state.description, location: this.state.location, fullTime: this.state.fullTime, pages: this.state.pages +=1}).then(this.props.history.push('/allJobs'))
     }
 
     componentDidMount() {
       this.props.fetchAllJobs()
+      if (Object.values(this.props.jobs).length === 50) { 
+        this.setState({ moreJobs: "block"})
+    } 
     }
+
+    componentDidUpdate(prevProps) {
+      if (Object.values(prevProps.jobs).length !== Object.values(this.props.jobs).length) {
+           debugger 
+          if (Object.values(this.props.jobs).length === 50) { 
+         this.setState({ moreJobs: "block"})
+      } else {
+          this.setState({ moreJobs: "none"})
+      }
+      }
+  }
 
     handleChange4Check(e) {
       this.setState({ fullTime: e.target.value})
@@ -72,7 +91,10 @@ class Greeting extends React.Component {
           
           <Route exact path={`/`} component={FeatJobs} props={this.props}/>
           <Route exact path={`/allJobs`} component={searchJobs} jobs={this.props.jobs}/>
+          <Route exact path={`/allJobs/:jobId`} component={ShowJob} />
+          <button className={this.state.moreJobs} onClick={this.moreJobs.bind(this)} >More Awesome Jobs</button>
         </div>
+        
       );
 
       

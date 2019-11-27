@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ProfilePage from './profile_page';
-import { updateUserAction, fetchUser } from '../../actions/user_actions'
+import { updateUserAction } from '../../actions/user_actions'
 
 
 const mapStateToProps = ({ session, entities: { users } }) => {

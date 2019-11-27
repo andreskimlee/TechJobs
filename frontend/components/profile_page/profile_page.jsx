@@ -5,7 +5,6 @@ import {withRouter, Route} from 'react-router-dom'
 import AboutPage from './about_page'
 import CreatePost from './create_post'
 import { connect } from 'react-redux'   
-import { fetchUser } from '../../actions/user_actions'
 import { createPost, getUsersPosts, editUsersPost, deleteUsersPost } from '../../actions/posts_actions'
 import { requestFriendship } from "../../actions/friendship_actions"
 import  UsersPosts  from './user_posts'

@@ -6,11 +6,13 @@ import friendships from './modal_reducer'
 import comments from './comments_reducer'
 import likes from './likes_reducer' 
 import jobs from './github_reducer'
+import job from './job_reducer'
 export default combineReducers({
   users,
   posts,
   friendships,
   comments,
   likes,
-  jobs
+  jobs,
+  job
 });
