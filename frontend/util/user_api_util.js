@@ -18,14 +18,14 @@ export const fetchUser = userId => {
 export const fetchAllJobs = () => {
     return $.ajax({
         method: "GET",
-        url: "https://jobs.github.com/positions.json?"
+        url: "https://twinetechjobs.herokuapp.com/https://jobs.github.com/positions.json?"
     })
 }
 
 export const fetchJob = (jobId) => {
     return $.ajax({
         method: "GET", 
-        url: `https://jobs.github.com/positions/${jobId}.json`
+        url: `https://twinetechjobs.herokuapp.com/https://jobs.github.com/positions/${jobId}.json`
     })
 }
 
@@ -34,6 +34,6 @@ export const searchJobs = (description, location, fullTime, pages) => {
     return $.ajax({
         
         method: "GET",
-        url: `https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}&page=${pages}`
+        url: `https://twinetechjobs.herokuapp.com/https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}&page=${pages}`
     })
 }
