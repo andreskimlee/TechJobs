@@ -22,6 +22,11 @@
 
 }
 
+.overall-cont {
+    background-color: #fafafa; 
+    height: auto;
+}
+
 .title-page { 
     text-decoration: none;
     font-size: 26px;

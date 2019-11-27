@@ -67,7 +67,8 @@ class Greeting extends React.Component {
           <div className="navhead">
          <a className="home-page" href="/"><div className="title-page">Tech <div className="lower-case-title">Jobs</div> </div></a>
           <Link className="all-jobs" to="/allJobs">All jobs</Link>
-          </div>     
+          </div> 
+          <div className="overall-cont">
           <div className="page-container"> 
             <div className="search-container">
               <div className="job-description-container">
@@ -91,10 +92,10 @@ class Greeting extends React.Component {
           
           <Route exact path={`/`} component={FeatJobs} props={this.props}/>
           <Route exact path={`/allJobs`} component={searchJobs} jobs={this.props.jobs}/>
-          <Route exact path={`/allJobs/:jobId`} component={ShowJob} />
           <button className={this.state.moreJobs} onClick={this.moreJobs.bind(this)} >More Awesome Jobs</button>
+          <Route exact path={`/allJobs/:jobId`} component={ShowJob} />
         </div>
-        
+        </div>   
       );
 
       

@@ -1,0 +1,81 @@
+.container-4-desc {
+    display: flex;
+}
+
+.comp-logo {
+    object-fit: contain;
+    width: 275px;
+    height: 72px;
+}
+
+.company {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+}
+
+.outer-box {
+    margin: 0 0 10px 0;
+    padding: 5px;
+    color: #777;
+    background: #eeeeee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.company-text {
+    margin: 0 0 8px -8px;
+    width: 100%;
+    padding: 0 8px 8px 8px;
+    font-size: 12px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.comp-url {
+    color:#3296d4;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.apply-cont {
+    border-color: #e5e4d7;
+    background-color: #fffeef;
+}
+
+.outer-bord {
+    background-color: #edeee1;
+}
+
+.description-txt {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #444; 
+    margin: 20px;
+}
+
+.location-type {
+    color:#7d7d7d;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.position-show-page {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #284455;
+    font-size: 20px;
+    margin-left: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
