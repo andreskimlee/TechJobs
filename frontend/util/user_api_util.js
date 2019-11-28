@@ -18,14 +18,16 @@ export const fetchUser = userId => {
 export const fetchAllJobs = () => {
     return $.ajax({
         method: "GET",
-        url: "https://jobs.github.com/positions.json?"
+        url: "https://jobs.github.com/positions.json?",
+        dataType: 'jsonp'
     })
 }
 
 export const fetchJob = (jobId) => {
     return $.ajax({
         method: "GET", 
-        url: `https://jobs.github.com/positions/${jobId}.json`
+        url: `https://jobs.github.com/positions/${jobId}.json`,
+        dataType: 'jsonp'
     })
 }
 
@@ -34,6 +36,7 @@ export const searchJobs = (description, location, fullTime, pages) => {
     return $.ajax({
         
         method: "GET",
-        url: `https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}&page=${pages}`
+        url: `https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}&page=${pages}`,
+        dataType: 'jsonp'
     })
 }
