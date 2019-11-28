@@ -19,7 +19,7 @@ export const fetchAllJobs = () => {
     return $.ajax({
         method: "GET",
         url: "https://jobs.github.com/positions.json?",
-        dataType: 'jsonp'
+        dataType: 'json'
     })
 }
 
@@ -27,7 +27,7 @@ export const fetchJob = (jobId) => {
     return $.ajax({
         method: "GET", 
         url: `https://jobs.github.com/positions/${jobId}.json`,
-        dataType: 'jsonp'
+        dataType: 'json'
     })
 }
 
@@ -37,6 +37,6 @@ export const searchJobs = (description, location, fullTime, pages) => {
         
         method: "GET",
         url: `https://jobs.github.com/positions.json?description=${description}&full_time=${fullTime}&location=${location}&page=${pages}`,
-        dataType: 'jsonp'
+        dataType: 'json'
     })
 }
